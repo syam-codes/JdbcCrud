@@ -21,17 +21,15 @@ public class JdbcConnection {
             System.out.print(res.getInt(1)+" - ");
             System.out.print(res.getString(2)+" - ");
             System.out.println(res.getInt(3));
-
         }
 
         statement.execute(delete);
-        System.out.println("After deleting the row");
+        System.out.println("After deleting the rows");
         ResultSet res2= statement.executeQuery(query);
         while (res2.next()){
             System.out.print(res2.getInt(1)+" - ");
             System.out.print(res2.getString(2)+" - ");
             System.out.println(res2.getInt(3));
-
         }
         System.out.println("After Updating the row");
         statement.execute(update);
